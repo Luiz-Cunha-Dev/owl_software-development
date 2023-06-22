@@ -63,6 +63,7 @@ function sendEmail(event) {
         Body : formatedMessage
     }).then((res) => {
         alert("E-mail enviado com sucesso!");
+        deleteInputsValues(event);
       })
       .catch(err => {
         console.log(err);
