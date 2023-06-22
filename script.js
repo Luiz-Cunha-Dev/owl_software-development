@@ -28,3 +28,54 @@ function toggleMode() {
 function googleTranslateElementInit() {
     new google.translate.TranslateElement({ pageLanguage: 'en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE }, 'google_translate_element');
 }
+
+function sendEmail(event) {
+    event.preventDefault();
+  
+    let name = document.getElementById("name").value;
+    let phone = document.getElementById("phone").value;
+    let email = document.getElementById("email").value;
+    let topic = document.getElementById("topic").value;
+    let message = document.getElementById("message").value;
+
+    let formatedMessage = `
+    <h1><b>Informações Enviadas<b/></h1>
+    <br/>
+    <b>Nome:</b> ${name}
+    <br/>
+    <br/>
+    <b>Celular:</b> ${phone}
+    <br/>
+    <br/>
+    <b>Mensagem:</b> ${message}
+    <br/>
+    <br/>
+    <b>Agradecemos pelo seu contato.</b>
+    `;
+
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "owlsoftwaredevelopment@gmail.com",
+        Password : "C6B5F254BA29347668216F3C3F807C2E2AE5",
+        To : email,
+        From : "owlsoftwaredevelopment@gmail.com",
+        Subject : topic,
+        Body : formatedMessage
+    }).then((res) => {
+        alert("E-mail enviado com sucesso!");
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  }
+
+  function deleteInputsValues(event) {
+    event.preventDefault();
+  
+    document.getElementById("name").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("topic").value = "";
+    document.getElementById("message").value = "";
+  }
+  

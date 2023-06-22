@@ -37,47 +37,47 @@
     <main>
         <section id="left-m">
             <h1>Contact Us</h1>
-            <form>
+            <form onsubmit="sendEmail(event)">
                 <div class="your-class">
-                    <label for="nome">
-                        <h3> Name: </h3>
+                    <label for="name">
+                        <h3>Name:</h3>
                     </label>
                     <input class="your-class" type="text" id="name" name="name_user" required>
                 </div>
-
+        
                 <div class="your-class">
                     <label for="phone">
-                        <h3> Phone: </h3>
+                        <h3>Phone:</h3>
                     </label>
-                    <input class="your-class" type="Phone" id="Phone" name="Phone_user" required>
+                    <input class="your-class" type="phone" id="phone" name="phone_user" required>
                 </div>
-
+        
                 <div class="your-class">
                     <label for="email">
-                        <h3> E-mail: </h3>
+                        <h3>Email:</h3>
                     </label>
                     <input class="your-class" type="email" id="email" name="email_user" required>
                 </div>
-
+        
                 <div class="your-class">
                     <label for="topic">
-                        <h3> Topic: </h3>
+                        <h3>Topic:</h3>
                     </label>
                     <input class="your-class" type="text" id="topic" name="topic_user" required>
                 </div>
-
+        
                 <div class="your-class">
                     <label for="message">
-                        <h3> Messsage: </h3>
+                        <h3>Message:</h3>
                     </label>
-                    <textarea id="message" name="messsage_user" required></textarea>
+                    <textarea id="message" name="message_user" required></textarea>
                 </div>
-
+        
                 <div class="button">
-                    <button type="submit" class="btn btn-light">Cancel</button>
+                    <button class="btn btn-light">Cancel</button>
                 </div>
                 <div class="button">
-                    <button type="submit" class="btn btn-light">send</button>
+                    <button class="btn btn-light">Send</button>
                 </div>
             </form>
 
@@ -93,6 +93,8 @@
     <script src="./script.js"></script>
     <script type="text/javascript"
         src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+        <script src="https://smtpjs.com/v3/smtp.js">
+        </script>
 </body>
 
 </html>

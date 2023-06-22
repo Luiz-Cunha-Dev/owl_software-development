@@ -7,6 +7,10 @@ input{
     border: none;
 }
 
+button{
+    cursor: pointer;
+}
+
 #message {
     border-radius: 20px;
     resize: none;
