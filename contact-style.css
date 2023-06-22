@@ -133,10 +133,15 @@ footer p {
         justify-content: center;
         align-items: center;
     }
+    
+    #logo-main{
+        border-radius: 100%;
+    }
 
     #left-m,
     #right-m {
         width: 100%;
+        align-items: center;
     }
 
     .your-class {
