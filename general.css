@@ -1,0 +1,218 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --text-color-nav-h1: #87b7ff;
+    --text-color-p: #87ddff;
+    --text-color-footer: #609bf3;
+    --bg-url: url(./assets/bg-desktop.jpg);
+    --stroke-color-header: #4c1bd3;
+    --stroke-color-footer: #240086;
+    --stroke-color: #b9aab352;
+    --surface-color: #56068b1f;
+    --highlight-color: #220829;
+    --text-color-hover: #07d9f5;
+    --surface-color-hover: #4c1bd30c;
+    --switch-bg-url: url(./assets/moon-stars.svg);
+}
+
+.light {
+    --text-color-nav-h1: #052553;
+    --text-color-p: #03030a;
+    --text-color-footer: #070f1b;
+    --bg-url: url(./assets/bg-desktop-light.jpg);
+    --stroke-color-header: #634000;
+    --stroke-color-footer: #99670b;
+    --stroke-color: #0b000f98;
+    --surface-color: #0b000f28;
+    --highlight-color: #634000;
+    --text-color-hover: #990518;
+    --surface-color-hover: #6b1bd30c;
+    --switch-bg-url: url(./assets/sun.svg);
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background: var(--bg-url) no-repeat top center/cover fixed;
+    color: #87b7ff;
+}
+
+header {
+    min-height: 10vh;
+    padding: .8rem .8rem;
+    gap: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid var(--stroke-color-header);
+    margin-bottom: 15px;
+}
+
+header ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+header ul li a {
+    padding: .5rem;
+    color: var(--text-color-nav-h1);
+    font-weight: 500;
+    border-radius: 2%;
+    transition: all .3s;
+}
+
+header ul li a:hover {
+    animation-direction: .5rem;
+    color: var(--text-color-hover);
+    background-color: var(--surface-color-hover);
+    font-weight: 700;
+}
+
+header .container-switch {
+    border-left: 2px solid var(--stroke-color-header);
+    padding-left: 2rem;
+}
+
+#switch {
+    position: relative;
+    width: 64px;
+    margin: 3px auto;
+}
+
+#switch button {
+    width: 32px;
+    height: 32px;
+    background: #dbd3dd var(--switch-bg-url) no-repeat center;
+    border: 0;
+    border-radius: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-50%);
+    animation: slide-back 0.2s;
+    margin-left: 1px;
+}
+
+.light #switch button {
+    animation: slide-in 0.2s forwards;
+}
+
+#switch button:hover {
+    outline: 2px solid var(--highlight-color);
+}
+
+#switch span {
+    display: block;
+    width: 72px;
+    height: 24px;
+    background: var(--surface-color);
+    border: 1px solid var(--stroke-color);
+    border-radius: 8px;
+}
+
+header button {
+    width: 20px;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    transition: all .3s;
+}
+
+header button img {
+    padding: .5rem;
+}
+
+header button img:hover {
+    animation-direction: .5rem;
+    color: var(--text-color-hover);
+    background-color: var(--surface-color-hover);
+    border-radius: 20%;
+}
+
+main {
+    min-height: 80vh;
+    padding: .8rem .8rem;
+    display: flex;
+    gap: 3rem;
+}
+
+#logo-main {
+    max-width: 90%;
+}
+
+footer {
+    min-height: 10vh;
+    padding: .8rem .8rem;
+    border-top: 1px solid var(--stroke-color-footer);
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+footer p {
+    color: var(--text-color-footer);
+    font-weight: 500;
+}
+
+@media(max-width: 521px) {
+
+    :root {
+        --bg-url: url(./assets/bg-mobile.jpg);
+    }
+
+    .light {
+        --bg-url: url(./assets/bg-mobile-light.jpg);
+    }
+
+    header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header .container-switch {
+        border-left: none;
+        padding-left: 0;
+    }
+}
+
+@keyframes slide-in {
+    from {
+        left: 0;
+    }
+
+    to {
+        left: 60%;
+    }
+}
+
+@keyframes slide-back {
+    from {
+        left: 50%;
+    }
+
+    to {
+        left: 0;
+    }
+}

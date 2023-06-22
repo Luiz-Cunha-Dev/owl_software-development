@@ -1,0 +1,146 @@
+.your-class {
+    border-radius: 20px;
+}
+
+input{
+    padding: 10px;
+    border: none;
+}
+
+#message {
+    border-radius: 20px;
+    resize: none;
+    width: 300px;
+    height: 100px;
+    padding: 8px;
+}
+
+label{
+    margin-right: 10px;
+}
+
+.container {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    min-height: 80vh;
+    padding: .8rem .8rem;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+#left-m {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#right-m {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#left-m h1 {
+    color: var(--text-color-nav-h1);
+    font-weight: 700;
+    font-size: 2.4rem;
+    text-align: center;
+    margin-bottom: 10%;
+}
+
+#left-m h3 {
+    color: var(--text-color-nav-h1);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10%;
+    float: left;
+}
+
+#left-m input,
+#left-m textarea {
+    color: var(--text-color-nav-h1);
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 10%;
+    display: inline-block;
+}
+
+#logo-main {
+    max-width: 60%;
+}
+.btn{
+    display:inline-block;
+    font-weight:400;
+    color:#212529;
+    float:left;
+    vertical-align:middle;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+    background-color:transparent;
+    border: 2px solid transparent;
+    margin: 0px 15px 15px ;
+    padding:.500rem .75rem;
+    font-size:1rem;
+    line-height:1.5;
+    border-radius:.25rem;
+}
+.btn-light:hover{
+    color:#212529;
+    background-color:#e2e6ea;
+    border-color:#dae0e5
+}
+.btn-light{
+    color:#212529;
+    background-color:#f8f9fa;
+    border-color:#f8f9fa;
+    
+}
+footer {
+    min-height: 10vh;
+    padding: .8rem .8rem;
+    border-top: 1px solid #240086;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+footer p {
+    color: var(--text-color-footer);
+    font-weight: 500;
+}
+
+@media (max-width: 521px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #left-m,
+    #right-m {
+        width: 100%;
+    }
+
+    .your-class {
+        color: #87b7ff;
+        font-weight: 700;
+        width: 100%;
+        font-size: 20px;
+        margin-bottom: 10%;
+        float: left;
+    }
+}
