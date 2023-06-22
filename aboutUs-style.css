@@ -77,7 +77,7 @@ section p {
 
 #logo-main {    
     height: 30vh;
-    width: 30vh;
+    min-width: 30vh;
     margin-top: 8%;
     border: none;
 }
